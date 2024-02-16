@@ -1,0 +1,80 @@
+body {
+  background-image: url("img.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 0px;
+  z-index: -1;
+  position: relative;
+  height: 100%;
+  background-size: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #03d7fc;
+}
+.big-text{
+  background-color: #000;
+  position:absolute;
+  z-index: 1;
+  opacity: 0.65;
+  height: 800px;
+  width: 100%;
+}
+
+.user-actions {
+    margin-left: 500px;
+    margin: auto;
+    width: 30%;
+    z-index: 3;
+    position: relative;
+    color: white;
+    margin-top: 110px;
+}
+
+.action {
+    border: 1px solid white;
+    padding: 10px 25px;
+    text-align: center;
+    border-radius: 50px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+.action:hover{
+    background-color: #cacfc8;
+    transition: 0.1s;
+}
+
+.action:hover a{
+    transition: 0.1s;
+    color: #000;
+}
+
+.action a {
+    font-size: 28px;
+}

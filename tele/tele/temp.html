@@ -1,0 +1,106 @@
+
+//Copied form homepage.
+
+<?php
+
+  $conn = mysqli_connect("localhost", "root", "", "med");
+  
+  // Check connection
+  if($conn === false){
+    die("ERROR: Could not connect. "
+      . mysqli_connect_error());
+  }
+  
+  // Taking all 5 values from the form data(input)
+$nameErr = $emailErr =  "";
+$uname = $uemail  = $uphone = $uaddress= $uusername =$upassword= "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $uname = test_input($_POST["uname"]);
+    $uemail = test_input($_POST["uemail"]);
+	$uphone = test_input($_POST["uphone"]);
+	$uusername = test_input($_POST["uusername"]);
+	$upassword = test_input($_POST["upassword"]);
+}
+
+function test_input($data) {
+  $data = trim($data);
+  $data = stripslashes($data);
+  $data = htmlspecialchars($data);
+  return $data;
+}
+if(!empty($uname)&&!empty($uemail)&&!empty($uusername)&&!empty($upassword)){
+	$sql = "INSERT INTO ureg VALUES ('$uname','$uemail','$uphone','$uusername','$upassword')";
+	if(mysqli_query($conn, $sql)){
+		echo "<h4 class='reg-mes'>Registration successful!</h4>";
+	}
+}else if(!empty($uname)||!empty($uemail)||!empty($uusername)||!empty($upassword)||!empty($uphone)){
+	echo "<h4 class='reg-mes'>All field must be filled!</h4>";
+}	
+//Close connection
+mysqli_close($conn);
+?>
+
+
+
+<div class="reg-wrapper">
+    <div class="reg-type">
+      <h4>Register As</h4>
+      <!-- <button type="button" id="adminbtn">Admin</button> -->
+      <button type="button" id = "pharmacybtn">Pharmacy Owner</button>
+      <button type = "button" id="userbtn">User</button>
+    </div>
+    <div id = "user-reg-id" class="user-reg">
+      <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+          <label> Name </label>
+          <input type="text" name="uname">
+
+          <label> E-mail </label>
+          <input type="email" name="uemail">
+
+          <label> Phone</label>
+          <input type="tel" name="uphone">
+
+          <label> Username</label>
+          <input type="text" name="uusername">
+          
+          <label>Password </label>
+          <input type="password" name = "upassword">
+
+          <a href="ulogin.php"> 
+          <input type="submit" name="submit" value="Register">  
+          </a>
+      </form>
+    </div>
+    <div id = "pharmacy-reg-id" class="user-reg">
+      <form>
+
+          <label> Pharmacy Name</label>
+          <input type="text" name="ph-name">
+
+          <label> Owner Name </label>
+          <input type="text" name="uname">
+
+          <label> E-mail </label>
+          <input type="email" name="uemail">
+
+          <label> Phone</label>
+          <input type="tel" name="uphone">
+
+          <label> Username</label>
+          <input type="text" name="uusername">
+
+          <label> Pharmacy License</label>
+          <input type="text" name="ph-license">
+          
+          <label>Password </label>
+          <input type="password" name = "upassword">
+
+          <input type="submit" name="submit" value="Register">  
+      </form>
+    </div>
+  </div>
+
+
+
+

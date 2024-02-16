@@ -1,0 +1,203 @@
+body {
+    background-image: url("img.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0px;
+    z-index: -1;
+    position: relative;
+    height: 100%;
+    background-size: 100%;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    text-align: center;
+    padding: 20px 25px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover{
+    background-color: #03d7fc;
+  }
+  li a.home:active{
+    background-color: #03d7fc;
+  }
+  .big-text{
+    background-color: #000;
+    position:absolute;
+    z-index: 1;
+    opacity: 0.5;
+    height: 130%;
+    width: 100%;
+  }
+  
+  .txt {
+      z-index: 3;
+      position: relative;
+      color: white;
+      font-size: 40px;
+      text-align: center;
+      vertical-align: middle;
+      padding-top: 100px;
+  }
+  .foot {
+      display: flex;
+      position: absolute;
+      z-index: 4;
+      color: white;
+      font-size: 16px;
+      line-height: 1.2;
+      padding: 10px;
+      background-color: #000;
+      margin-top: 180px;
+  }
+  .foot-about h3 {
+      font-size: 22px;
+  }
+  .foot-about.foot-child {
+      flex: 75%;
+  }
+  
+  .foot-child.contact-us {
+      flex: 25%;
+      padding-left: 60px;
+  }
+  
+  .foot-child.contact-us a{
+    display: block;
+  }
+  
+  .reg-type h4 {
+      font-size: 20px;
+  }
+  
+  .reg-type {
+      background-color: white;
+      width: 500px;
+      margin-left: 430px;
+      color: black;
+      padding: 20px;
+      padding-top: 1px;
+      margin-top: 0;
+  }
+  
+  .reg-type a {
+      display: inline-block;
+      color: black;
+      font-size: 22px;
+      border: 1px solid #ddd;
+      border-radius: 50px;
+      padding: 10px 25px;
+  }
+  
+  .reg-type a:hover {
+      background-color: #ddd;
+      transition: 0.1s;
+  }
+  
+  .reg-type a:active {
+      background-color: #ddd;
+  }
+  
+  .user-reg {
+      background: white;
+      width: 475px;
+      margin-left: 430px;
+      color: black;
+  }
+  
+  
+  
+  .user-reg label {
+      display: block;
+      font-size: 20px;
+      text-align: left;
+  }
+  
+  .user-reg input {
+      display: block;
+      width: 355px;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #ced4da;
+      margin-top: 5px;
+      margin-bottom: 15px;
+  }
+  
+  .user-reg {
+      padding-left: 65px;
+      padding-top: 30px;
+      border-top: 1px solid #ddd;
+      padding-bottom: 15px ;
+  }
+  user-reg input[type="submit"] {
+      border-radius: 50px;
+  }
+  
+  .user-reg input[type="submit"] {
+      background: white;
+      border-radius: 50px;
+      margin-left: 15px;
+      margin-top: 20px;
+      font-size: 18px;
+  }
+  
+  .user-reg input[type="submit"]:hover {
+      background-color: #ddd;
+      transition: 0.1s;
+  }
+  #admin-reg-id{
+    position: fixed;
+    visibility: hidden;
+    z-index: -10;
+  }
+  #pharmacy-reg-id{
+    position:fixed;
+    visibility: hidden;
+    z-index: -10;
+  }
+  #userbtn{
+    background-color: #ddd;
+  }
+  
+  .reg-type button {
+      background: none;
+      border: 1px solid #ddd;
+      padding: 10px 25px;
+      border-radius: 50px;
+      font-size: 18px;
+  }
+  
+  .reg-type button:hover {
+      background: #ddd;
+      transition: 0.1s;
+  }
+
+
+#user-reg-id{
+    visibility: hidden;
+    z-index: -10;
+    position: fixed;
+}
+#loginbtn{
+  background-color: #ddd;
+}
